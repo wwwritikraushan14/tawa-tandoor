@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tawa &amp; Tandoor — Indian Restaurant | Veg &amp; Non-Veg</title>
+<meta name="description" content="Tawa & Tandoor — an Indian kitchen serving both veg and non-veg: slow gravies, clay-oven kebabs and dum biryanis, cooked fresh every day.">
+<meta property="og:title" content="Tawa & Tandoor — Indian Restaurant">
+<meta property="og:description" content="An Indian kitchen serving both veg and non-veg, from the tawa and the tandoor.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#7B1E1E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Tawa & Tandoor","servesCuisine":"Indian","telephone":"+91 82921 60777","address":{"@type":"PostalAddress","addressCountry":"IN"},"openingHours":"Mo-Su 11:00-22:30","priceRange":"₹₹"}
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav-in">
+    <a class="brand" href="#home">Tawa <span>&amp;</span> Tandoor</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#signatures">Signatures</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#visit">Visit Us</a></li>
+      <li><a href="#book">Book a Table</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <img class="hero-img" src="hero.jpg" alt="Warm, inviting Indian restaurant dining room" fetchpriority="high">
+  <div class="hero-text">
+    <div class="wrap">
+      <p class="kicker">Indian Kitchen &nbsp;·&nbsp; Veg &amp; Non-Veg</p>
+      <h1>Where the tawa meets the tandoor.</h1>
+      <p>Slow gravies, clay-oven kebabs and dum biryanis — an Indian kitchen serving both veg and non-veg, cooked fresh every day.</p>
+      <p><a class="btn" href="#book">Book a Table</a> &nbsp; <a class="btn ghost" href="#menu" style="background:#fff">See the Menu</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap center reveal">
+    <p class="kicker">Namaste, and welcome</p>
+    <h2>One kitchen, two traditions</h2>
+    <p style="max-width:720px;margin:0 auto">Half our menu comes off the tawa — dosas, paneer and slow-cooked dals. The other half comes out of the tandoor — tikka, kebabs and butter chicken. Veg and non-veg, cooked in the same kitchen, with the same care.</p>
+  </div>
+</section>
+
+<section class="section tint" id="signatures">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="kicker">Guest favourites</p>
+      <h2>Signature dishes</h2>
+    </div>
+    <div class="grid">
+      <article class="card reveal">
+        <img src="sig-paneer-tikka.jpg" alt="Paneer tikka with peppers and mint chutney" loading="lazy">
+        <div class="card-body">
+          <span class="badge veg">Veg</span>
+          <h3>Paneer Tikka</h3>
+          <p>Char-grilled cottage cheese, peppers and onions, with mint chutney.</p>
+          <p class="price">₹299</p>
+        </div>
+      </article>
+      <article class="card reveal">
+        <img src="sig-butter-chicken.jpg" alt="Butter chicken in a rich tomato gravy" loading="lazy">
+        <div class="card-body">
+          <span class="badge nonveg">Non-Veg</span>
+          <h3>Butter Chicken</h3>
+          <p>Tandoor chicken folded into a slow-simmered tomato-butter gravy.</p>
+          <p class="price">₹399</p>
+        </div>
+      </article>
+      <article class="card reveal">
+        <img src="sig-biryani.jpg" alt="Chicken dum biryani with saffron rice" loading="lazy">
+        <div class="card-body">
+          <span class="badge nonveg">Non-Veg</span>
+          <h3>Chicken Dum Biryani</h3>
+          <p>Layered basmati, saffron and fried onions, sealed and slow-steamed.</p>
+          <p class="price">₹349</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="menu">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="kicker">The menu</p>
+      <h2>Veg, non-veg — pick your side</h2>
+      <div class="tabs" role="group" aria-label="Filter menu">
+        <button class="tab active" data-filter="all">All</button>
+        <button class="tab" data-filter="veg">Veg</button>
+        <button class="tab" data-filter="nonveg">Non-Veg</button>
+      </div>
+    </div>
+    <div class="menu-list">
+      <h3 class="menu-cat">Veg Starters</h3>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Paneer Tikka</h3><p>Char-grilled cottage cheese, peppers, mint chutney.</p></div>
+        <span class="price">₹299</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Hara Bhara Kebab</h3><p>Spinach, peas and potato patties, mint chutney.</p></div>
+        <span class="price">₹249</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Samosa Chaat</h3><p>Crushed samosa, chole, yogurt, tamarind and sev.</p></div>
+        <span class="price">₹179</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Dahi Ke Kebab</h3><p>Crisp hung-curd patties, mint chutney.</p></div>
+        <span class="price">₹269</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Mushroom Tikka</h3><p>Tandoor-roasted mushrooms, peppers and spices.</p></div>
+        <span class="price">₹279</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Veg Manchuria</h3><p>Indo-Chinese veg dumplings in garlic-soy glaze.</p></div>
+        <span class="price">₹229</span>
+      </div>
+      <h3 class="menu-cat">Veg Mains</h3>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Paneer Butter Masala</h3><p>Cottage cheese in rich tomato-butter gravy.</p></div>
+        <span class="price">₹329</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Paneer Tikka Masala</h3><p>Smoky paneer tikka folded into spiced gravy.</p></div>
+        <span class="price">₹349</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Palak Paneer</h3><p>Cottage cheese in creamy spinach gravy.</p></div>
+        <span class="price">₹299</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Dal Makhani</h3><p>Black dal simmered overnight, butter and cream.</p></div>
+        <span class="price">₹249</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Dal Tadka</h3><p>Yellow dal tempered with garlic and ghee.</p></div>
+        <span class="price">₹199</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Malai Kofta</h3><p>Soft paneer dumplings in creamy cashew gravy.</p></div>
+        <span class="price">₹319</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Chole Bhature</h3><p>Spiced chickpeas with fluffy fried bread.</p></div>
+        <span class="price">₹249</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Veg Kolhapuri</h3><p>Mixed vegetables in fiery Kolhapuri masala.</p></div>
+        <span class="price">₹279</span>
+      </div>
+      <h3 class="menu-cat">Dosa & Thali</h3>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Masala Dosa</h3><p>Crisp crepe, spiced potato, coconut chutney, sambar.</p></div>
+        <span class="price">₹199</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Mysore Masala Dosa</h3><p>Spicier red-garlic chutney, potato palya, sambar.</p></div>
+        <span class="price">₹229</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Royal Veg Thali</h3><p>Dal, paneer, seasonal sabzi, rice, naan and dessert.</p></div>
+        <span class="price">₹349</span>
+      </div>
+      <h3 class="menu-cat">Non-Veg Starters</h3>
+      <div class="menu-item reveal" data-kind="nonveg">
+        <div><h3><span class="dot nonveg"></span>Chicken Tikka</h3><p>Char-grilled chicken tikka, lemon and onions.</p></div>
+        <span class="price">₹349</span>
+      </div>
+      <div class="menu-item reveal" data-kind="nonveg">
+        <div><h3><span class="dot nonveg"></span>Tandoori Chicken</h3><p>Overnight marinade, clay-oven roasted.</p></div>
+        <span class="price">₹379</span>
+      </div>
+      <div class="menu-item reveal" data-kind="nonveg">
+        <div><h3><span class="dot nonveg"></span>Chicken 65</h3><p>Fiery South Indian fried chicken, curry leaves.</p></div>
+        <span class="price">₹329</span>
+      </div>
+      <div class="menu-item reveal" data-kind="nonveg">
+        <div><h3><span class="dot nonveg"></span>Mutton Seekh Kebab</h3><p>Hand-minced mutton kebabs from the tandoor.</p></div>
+        <span class="price">₹399</span>
+      </div>
+      <div class="menu-item reveal" data-kind="nonveg">
+        <div><h3><span class="dot nonveg"></span>Amritsari Fish</h3><p>Crisp battered fish, Punjabi-style.</p></div>
+        <span class="price">₹399</span>
+      </div>
+      <div class="menu-item reveal" data-kind="nonveg">
+        <div><h3><span class="dot nonveg"></span>Chicken Manchuria</h3><p>Indo-Chinese chicken in garlic-soy glaze.</p></div>
+        <span class="price">₹329</span>
+      </div>
+      <h3 class="menu-cat">Non-Veg Mains</h3>
+      <div class="menu-item reveal" data-kind="nonveg">
+        <div><h3><span class="dot nonveg"></span>Butter Chicken</h3><p>Tandoor chicken in tomato-butter gravy, with naan.</p></div>
+        <span class="price">₹399</span>
+      </div>
+      <div class="menu-item reveal" data-kind="nonveg">
+        <div><h3><span class="dot nonveg"></span>Chicken Tikka Masala</h3><p>Smoky chicken tikka in rich spiced gravy.</p></div>
+        <span class="price">₹379</span>
+      </div>
+      <div class="menu-item reveal" data-kind="nonveg">
+        <div><h3><span class="dot nonveg"></span>Mutton Rogan Josh</h3><p>Slow-braised mutton in Kashmiri chilli gravy.</p></div>
+        <span class="price">₹449</span>
+      </div>
+      <div class="menu-item reveal" data-kind="nonveg">
+        <div><h3><span class="dot nonveg"></span>Dhaba Chicken Curry</h3><p>Rustic onion-tomato chicken curry.</p></div>
+        <span class="price">₹369</span>
+      </div>
+      <div class="menu-item reveal" data-kind="nonveg">
+        <div><h3><span class="dot nonveg"></span>Egg Curry</h3><p>Eggs in spiced onion-tomato gravy.</p></div>
+        <span class="price">₹249</span>
+      </div>
+      <div class="menu-item reveal" data-kind="nonveg">
+        <div><h3><span class="dot nonveg"></span>Fish Curry</h3><p>Fish simmered in tangy coastal masala.</p></div>
+        <span class="price">₹399</span>
+      </div>
+      <h3 class="menu-cat">Biryani</h3>
+      <div class="menu-item reveal" data-kind="nonveg">
+        <div><h3><span class="dot nonveg"></span>Chicken Dum Biryani</h3><p>Layered basmati, saffron, raita and mirchi ka salan.</p></div>
+        <span class="price">₹349</span>
+      </div>
+      <div class="menu-item reveal" data-kind="nonveg">
+        <div><h3><span class="dot nonveg"></span>Mutton Biryani</h3><p>Slow-cooked mutton layered with saffron rice.</p></div>
+        <span class="price">₹449</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Subz Dum Biryani</h3><p>Seasonal vegetables and paneer, sealed and steamed.</p></div>
+        <span class="price">₹299</span>
+      </div>
+      <div class="menu-item reveal" data-kind="nonveg">
+        <div><h3><span class="dot nonveg"></span>Egg Biryani</h3><p>Boiled eggs layered with spiced basmati.</p></div>
+        <span class="price">₹279</span>
+      </div>
+      <h3 class="menu-cat">Breads & Rice</h3>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Butter Naan</h3><p>Soft tandoor-baked bread, brushed with butter.</p></div>
+        <span class="price">₹59</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Garlic Naan</h3><p>Tandoor bread with garlic and coriander.</p></div>
+        <span class="price">₹69</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Lachha Paratha</h3><p>Flaky sixteen-layer whole-wheat bread.</p></div>
+        <span class="price">₹79</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Tandoori Roti</h3><p>Classic clay-oven whole-wheat bread.</p></div>
+        <span class="price">₹49</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Butter Kulcha</h3><p>Soft leavened bread, buttered.</p></div>
+        <span class="price">₹89</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Jeera Rice</h3><p>Basmati tempered with cumin and ghee.</p></div>
+        <span class="price">₹179</span>
+      </div>
+      <h3 class="menu-cat">Desserts & Drinks</h3>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Gulab Jamun</h3><p>Warm syrup-soaked dumplings.</p></div>
+        <span class="price">₹149</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Rasmalai</h3><p>Saffron milk-soaked chenna discs.</p></div>
+        <span class="price">₹179</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Kulfi Falooda</h3><p>Dense kulfi over falooda noodles and basil seeds.</p></div>
+        <span class="price">₹199</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Gajar Ka Halwa</h3><p>Slow-cooked carrot pudding with ghee and nuts.</p></div>
+        <span class="price">₹179</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Mango Lassi</h3><p>Thick yogurt drink with Alphonso mango.</p></div>
+        <span class="price">₹129</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Sweet Lassi</h3><p>Classic chilled sweet yogurt drink.</p></div>
+        <span class="price">₹99</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Masala Chai</h3><p>Spiced milk tea.</p></div>
+        <span class="price">₹79</span>
+      </div>
+      <div class="menu-item reveal" data-kind="veg">
+        <div><h3><span class="dot veg"></span>Buttermilk</h3><p>Spiced chaas, lightly salted.</p></div>
+        <span class="price">₹69</span>
+      </div>
+    </div>
+    <p class="muted center" style="margin-top:20px">Menu prices are demo values and can be changed easily.</p>
+  </div>
+</section>
+
+<section class="section tint" id="gallery">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="kicker">From the kitchen</p>
+      <h2>Gallery</h2>
+      <p class="muted">Tap any photo to view it larger.</p>
+    </div>
+    <div class="gal">
+      <img class="reveal" src="gal-interior.jpg" alt="Restaurant dining room" loading="lazy">
+      <img class="reveal" src="gal-samosa-chaat.jpg" alt="Samosa chaat" loading="lazy">
+      <img class="reveal" src="gal-dosa.jpg" alt="Masala dosa" loading="lazy">
+      <img class="reveal" src="gal-tandoori.jpg" alt="Tandoori chicken" loading="lazy">
+      <img class="reveal" src="gal-mutton-biryani.jpg" alt="Mutton biryani" loading="lazy">
+      <img class="reveal" src="gal-fish.jpg" alt="Amritsari fish" loading="lazy">
+      <img class="reveal" src="gal-gulab-jamun.jpg" alt="Gulab jamun" loading="lazy">
+      <img class="reveal" src="gal-mango-lassi.jpg" alt="Mango lassi" loading="lazy">
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lb-btn lb-close" id="lbClose" aria-label="Close">&times;</button>
+    <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous photo">&#8249;</button>
+    <img id="lbImg" src="" alt="">
+    <button class="lb-btn lb-next" id="lbNext" aria-label="Next photo">&#8250;</button>
+  </div>
+</section>
+
+<section class="section" id="visit">
+  <div class="wrap visit-in">
+    <div class="info-card reveal">
+      <p class="kicker">Visit us</p>
+      <h2>Find us</h2>
+      <p class="muted">India</p>
+      <p>Open all days, 11:00 AM &ndash; 10:30 PM.</p>
+      <p>Call or WhatsApp us on <a href="tel:+918292160777">+91 82921 60777</a>.</p>
+      <p><a class="btn wa-btn" href="https://wa.me/918292160777?text=Hello%20Tawa%20%26%20Tandoor%2C%20I%20have%20a%20question." target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+    </div>
+    <div class="info-card reveal" id="book">
+      <p class="kicker">Book your table</p>
+      <h2>Reserve a table</h2>
+      <form id="bookForm" novalidate>
+        <label for="bkName">Your name</label>
+        <input id="bkName" type="text" autocomplete="name" placeholder="e.g. Aarav Sharma">
+        <label for="bkPhone">Mobile number</label>
+        <input id="bkPhone" type="tel" autocomplete="tel" placeholder="10-digit mobile number">
+        <label for="bkDate">Date</label>
+        <input id="bkDate" type="date">
+        <label for="bkTime">Time</label>
+        <select id="bkTime">
+          <option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option>
+          <option>7:00 PM</option><option selected>8:00 PM</option><option>9:00 PM</option>
+          <option>Flexible</option>
+        </select>
+        <label for="bkGuests">Guests</label>
+        <select id="bkGuests">
+          <option>2</option><option>3</option><option>4</option>
+          <option>5</option><option>6</option><option>8+</option>
+        </select>
+        <label for="bkNotes">Anything else? <span class="muted">(optional)</span></label>
+        <textarea id="bkNotes" rows="3" placeholder="e.g. Window seat, birthday celebration"></textarea>
+        <p class="form-err" id="bkErr" role="alert"></p>
+        <button class="btn" type="submit">Send booking on WhatsApp</button>
+      </form>
+      <div class="confirm" id="bookConfirm">
+        <h3>Booking request ready</h3>
+        <p>Your booking reference is <strong id="bookRef"></strong>. It opens in WhatsApp — send the message to confirm your request with the restaurant.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tint">
+  <div class="wrap center reveal">
+    <p class="kicker">Guest reviews</p>
+    <h2>What guests say</h2>
+    <p class="muted">Guest reviews will appear here as real visitors share them.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <p><strong>Tawa &amp; Tandoor</strong> — Indian kitchen, veg &amp; non-veg.</p>
+      <p>Photos: the restaurant's own dish photos; dining-room photo: Wikimedia Commons contributors. Menu prices are demo values.</p>
+    </div>
+    <div>
+      <p><strong>Explore</strong></p>
+      <p><a href="#signatures">Signatures</a> &middot; <a href="#menu">Menu</a> &middot; <a href="#gallery">Gallery</a> &middot; <a href="#book">Book a Table</a></p>
+    </div>
+    <div>
+      <p><strong>Visit us</strong></p>
+      <p>India &middot; Open all days, 11:00 AM &ndash; 10:30 PM<br><a href="tel:+918292160777">+91 82921 60777</a> &middot; <a href="https://wa.me/918292160777" target="_blank" rel="noopener">WhatsApp</a></p>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/918292160777?text=Hello%20Tawa%20%26%20Tandoor%2C%20I%20would%20like%20to%20book%20a%20table." target="_blank" rel="noopener">WhatsApp Us</a>
+
+<script src="app.js" defer></script>
+</body>
+</html>
