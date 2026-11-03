@@ -1,18 +1,18 @@
 /* Tawa & Tandoor — frontend-only demo restaurant site. No build step. */
 :root{
-  --cream:#FFF8F0; --cream2:#FDEEDD; --white:#FFFFFF;
-  --maroon:#7B1E1E; --maroon2:#5E1515; --saffron:#D97706; --gold:#C6A477;
-  --ink:#2B2118; --muted:#6B5D52; --line:#EAD9C4;
+  --cream:#FFF7EE; --cream2:#FCEEDD; --white:#FFFFFF;
+  --maroon:#6E1423; --maroon2:#4E0E1A; --saffron:#E07B2A; --gold:#C6A477; --gold2:#E7C987;
+  --ink:#2B2118; --muted:#6B5D52; --line:#EAD9C4; --dark:#1F130D;
   --radius:18px; --shadow:0 10px 30px rgba(43,33,24,.12);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+body{margin:0;font-family:"Jost",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
   background:var(--cream);color:var(--ink);font-size:16px;line-height:1.6}
 img{max-width:100%;display:block}
 a{color:var(--maroon)}
 .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;margin:0 0 12px}
+h1,h2,h3{font-family:"Fraunces",Georgia,"Times New Roman",serif;line-height:1.2;margin:0 0 12px}
 h2{font-size:clamp(1.7rem,4vw,2.4rem)}
 p{margin:0 0 12px}
 .muted{color:var(--muted)}
@@ -31,7 +31,7 @@ p{margin:0 0 12px}
 header{position:sticky;top:0;z-index:50;background:rgba(255,248,240,.95);
   backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
-.brand{font-family:Georgia,serif;font-size:1.45rem;font-weight:700;color:var(--maroon);text-decoration:none}
+.brand{font-family:"Fraunces",Georgia,serif;font-size:1.45rem;font-weight:700;color:var(--maroon);text-decoration:none}
 .brand span{color:var(--saffron)}
 .nav-links{display:flex;gap:22px;list-style:none;margin:0;padding:0}
 .nav-links a{text-decoration:none;color:var(--ink);font-weight:600}
@@ -139,3 +139,105 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
 .menu-item{align-items:center}
 .menu-item>div{flex:1;min-width:0}
 .thumb{width:72px;height:72px;object-fit:cover;border-radius:12px;flex-shrink:0}
+
+/* ---------- Premium theme + motion ---------- */
+section[id]{scroll-margin-top:76px}
+
+/* Header: shadow on scroll + nav underline sweep */
+header{transition:box-shadow .3s ease}
+header.scrolled{box-shadow:0 8px 26px rgba(43,33,24,.20)}
+.nav-links a{position:relative;padding-bottom:2px}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:100%;
+  background:var(--saffron);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.nav-links a:hover::after{transform:scaleX(1)}
+
+/* Hero: slow Ken Burns zoom + staggered entrance */
+.hero img.hero-img{animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.12)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes wordUp{from{opacity:0;transform:translateY(110%)}to{opacity:1;transform:none}}
+.hero-text .kicker{animation:fadeUp .7s ease .05s both}
+.hero-text h1 .w{display:inline-block;opacity:0;animation:wordUp .8s cubic-bezier(.2,.7,.2,1) forwards}
+.hero-text h1 .w:nth-child(1){animation-delay:.15s}
+.hero-text h1 .w:nth-child(2){animation-delay:.25s}
+.hero-text h1 .w:nth-child(3){animation-delay:.35s}
+.hero-text h1 .w:nth-child(4){animation-delay:.45s}
+.hero-text h1 .w:nth-child(5){animation-delay:.55s}
+.hero-text h1 .w:nth-child(6){animation-delay:.65s}
+.hero-sub{animation:fadeUp .7s ease .8s both}
+.hero-cta{animation:fadeUp .7s ease 1s both}
+
+/* Scrolling dish marquee */
+.marquee{background:var(--maroon);color:#FFE9C2;overflow:hidden;padding:13px 0;
+  border-top:1px solid var(--gold);border-bottom:1px solid var(--gold)}
+.marquee-track{display:flex;width:max-content;animation:scrollX 34s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track span{white-space:nowrap;font-family:"Fraunces",Georgia,serif;
+  font-size:1.05rem;letter-spacing:.06em;padding-right:10px}
+@keyframes scrollX{to{transform:translateX(-50%)}}
+
+/* Buttons: lift + shine sweep */
+.btn{position:relative;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease,background .25s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(110,20,35,.30)}
+.btn::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);
+  transform:skewX(-20deg);transition:left .6s ease}
+.btn:hover::after{left:130%}
+
+/* Cards: lift + image zoom */
+.card{transition:transform .35s ease,box-shadow .35s ease}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 42px rgba(43,33,24,.22)}
+.card img{transition:transform .6s ease}
+.card:hover img{transform:scale(1.06)}
+
+/* Tabs */
+.tab{transition:transform .25s ease,box-shadow .25s ease,background .25s ease,color .25s ease}
+.tab:hover{transform:translateY(-1px)}
+.tab.active{box-shadow:0 8px 18px rgba(110,20,35,.32)}
+
+/* Menu: staggered reveal + hover */
+.menu-item{transition:opacity .7s ease var(--d,0s),transform .7s ease var(--d,0s),
+  background .3s ease 0s,box-shadow .3s ease 0s}
+.menu-item:hover{background:#FFFDF6;box-shadow:0 10px 22px rgba(43,33,24,.10)}
+.thumb{transition:transform .4s ease}
+.menu-item:hover .thumb{transform:scale(1.08)}
+
+/* Gallery: zoom hover + lightbox entrance */
+.gal img{transition:transform .5s ease,box-shadow .5s ease}
+.gal img:hover{transform:scale(1.04);box-shadow:0 14px 30px rgba(0,0,0,.28)}
+.lightbox.open img{animation:lbIn .35s ease}
+@keyframes lbIn{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+
+/* Gold ornament under section headings */
+.center h2{position:relative;padding-bottom:16px}
+.center h2::after{content:"";position:absolute;left:50%;bottom:0;width:56px;height:3px;
+  background:var(--gold);border-radius:2px;
+  transform:translateX(-50%) scaleX(0);transition:transform .8s ease .25s}
+.reveal.in h2::after{transform:translateX(-50%) scaleX(1)}
+
+/* Dark Visit section */
+.section.dark{background:var(--dark);color:#F3E9D8}
+.section.dark h2{color:#FFF6E6}
+.section.dark .kicker{color:var(--gold2)}
+.section.dark .muted{color:#CBB79F}
+.section.dark a{color:var(--gold2)}
+.section.dark .info-card{background:#2A1A11;border-color:#4A3220;color:#F3E9D8}
+.section.dark input,.section.dark select,.section.dark textarea{
+  background:#1F130D;color:#F3E9D8;border-color:#4A3220}
+.section.dark .confirm{background:#2A1A11;border-color:var(--gold)}
+
+/* Dark footer */
+footer{background:var(--dark);color:#CBB79F;border-top:1px solid #3A2718}
+footer a{color:var(--gold2)}
+footer strong{color:#FFF3DF}
+
+/* WhatsApp float: entrance + soft pulse */
+@keyframes floatIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes floatPulse{0%,100%{box-shadow:0 8px 24px rgba(0,0,0,.25)}
+  50%{box-shadow:0 8px 24px rgba(0,0,0,.25),0 0 0 10px rgba(37,211,102,.16)}}
+.wa-float{animation:floatIn .7s ease 1.2s both,floatPulse 3s ease-in-out 2.2s infinite}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;
+    transition-duration:.01ms!important}
+}

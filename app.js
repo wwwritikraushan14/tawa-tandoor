@@ -172,3 +172,21 @@ var WHATSAPP_NUMBER = "918292160777";
     c.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 })();
+
+/* Header shadow on scroll */
+(function () {
+  var h = document.querySelector("header");
+  if (!h) return;
+  function upd() { h.classList.toggle("scrolled", window.scrollY > 10); }
+  window.addEventListener("scroll", upd, { passive: true });
+  upd();
+})();
+
+/* Staggered menu reveal: each row fades in a beat after the previous one */
+(function () {
+  document.querySelectorAll(".menu-list").forEach(function (list) {
+    list.querySelectorAll(".menu-item").forEach(function (it, i) {
+      it.style.setProperty("--d", (i % 8) * 60 + "ms");
+    });
+  });
+})();
