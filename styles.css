@@ -134,3 +134,8 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-s
 .dot::after{content:"";position:absolute;inset:3px;background:#2E7D32;border-radius:50%}
 .dot.nonveg{border-color:#9C2B1B}
 .dot.nonveg::after{background:#9C2B1B}
+
+/* Menu thumbnails */
+.menu-item{align-items:center}
+.menu-item>div{flex:1;min-width:0}
+.thumb{width:72px;height:72px;object-fit:cover;border-radius:12px;flex-shrink:0}
